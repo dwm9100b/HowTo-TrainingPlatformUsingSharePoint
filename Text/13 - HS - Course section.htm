@@ -1,0 +1,228 @@
+<!-- HS - Course section.htm -->
+<div style='width: 650px; margin-top: 0px;'>
+
+    <p style='margin-top: 0px;'>
+        Time to build out our course selection section. We will be adding the
+        controls and then we'll come back and update their properties.
+    </p>
+
+    <ol>
+        <li>Before we go further, right click on the App object</li>
+        <li>Now click on Run OnStart</li>
+        <li>This will populate some data we'll use</li>
+        <li>Now in the Tree view, click on conCourses</li>
+        <li>From the top toolbar, click on +Insert</li>
+        <li>Locate and select the Blank Vertical gallery under Layout</li>
+        <li>When prompted, select colAllCourses as the data source</li>
+        <li>Rename this: galCourseMenu</li>
+        <li>Again, from the top toolbar, click on +Insert</li>
+        <li>Locate and select the Combo box under Input</li>
+        <li>When prompted, select colUniqueKeywords as the data source</li>
+        <li>Rename this: cboFilterTags</li>
+        <li>Again, from the top toolbar, click on +Insert</li>
+        <li>Locate and select the Text label control</li>
+        <li>Rename this: lblSelectCourse</li>
+        <li>From the top toolbar, click on +Insert</li>
+        <li>Locate and select the Rectangle shape under Shapes</li>
+        <li>Rename this: rectSelectCourseCursor</li>
+        <li>The order of the controls from top to bottom should be<br>
+            <ul style='list-style-type: disc;'>
+                <li>rectSelectCourseCursor</li>
+                <li>lblSelectCourse</li>
+                <li>cboFilterTags</li>
+                <li>galCourseMenu</li>
+            </ul><br>
+        </li>
+        <li>Time to update some properties</li>
+        <li>First up, click on <b>rectSelectCourseCursor</b> and update the following<br>
+            <br>
+            <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+                <tbody>
+                    <tr style='font-weight: bold; background-color: LightGrey; vertical-align: top;'>
+                        <td width=170>Property</td>
+                        <td>Value</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>X</td>
+                        <td>0</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Y</td>
+                        <td>0</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Width</td>
+                        <td>Parent.Width</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Height</td>
+                        <td>rectIntroTitleCursor.Height</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Fill</td>
+                        <td>Color.Transparent</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <br>
+        <li>Next let's update properties for <b>lblSelectCourse</b>, click on it<br>
+            <br>
+            <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+                <tbody>
+                    <tr style='font-weight: bold; background-color: LightGrey; vertical-align: top;'>
+                        <td width=170>Property</td>
+                        <td>Value</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>X</td>
+                        <td>rectSelectCourseCursor.X</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Y</td>
+                        <td>rectSelectCourseCursor.Y</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Width</td>
+                        <td>rectSelectCourseCursor.Width</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Text</td>
+                        <td>&quot;Select a Course&quot;</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Size</td>
+                        <td>20</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Height</td>
+                        <td>rectSelectCourseCursor.Height</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Color</td>
+                        <td>Color.White</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Align</td>
+                        <td>Align.Center</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <br>
+        <li>Now click on <b>cboFilterTags</b> and update the following properties<br>
+            <br>
+            <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+                <tbody>
+                    <tr style='font-weight: bold; background-color: LightGrey; vertical-align: top;'>
+                        <td width=170>Property</td>
+                        <td>Value</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>X</td>
+                        <td>(Parent.Width / 2) - (Self.Width / 2)</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Y</td>
+                        <td>lblSelectCourse.Y + lblSelectCourse.Height</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Width</td>
+                        <td>Parent.Width - 150</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>SelectMultiple</td>
+                        <td>true</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>OnChange</td>
+                        <td>
+                            <span style='color: #b54b8c'>
+                                // Every time there is a change to the combo box entries<br>
+                                // add any selected items to our search tag collection<br>
+                            </span>
+                            ClearCollect(colFilterTags, Self.SelectedItems)<br>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>NoSelectionText</td>
+                        <td>&quot;You can filter the list here...&quot;</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Height</td>
+                        <td>40</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>FocusedBorderThickness</td>
+                        <td>0</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>BorderThickness</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <br>
+        <li>And finally, click on <b>galCourseMenu</b> and update the following properties<br>
+            Note that we are only updating visual properties here, next lesson is functional<br>
+            <br>
+            <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+                <tbody>
+                    <tr style='font-weight: bold; background-color: LightGrey; vertical-align: top;'>
+                        <td width=170>Property</td>
+                        <td>Value</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>X</td>
+                        <td>cboFilterTags.X</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Y</td>
+                        <td>cboFilterTags.Y + cboFilterTags.Height + 10</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Width</td>
+                        <td>cboFilterTags.Width</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>TemplateSize</td>
+                        <td>145</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>TemplatePadding</td>
+                        <td>0</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>TemplateFill</td>
+                        <td>If(ThisItem.IsSelected, Color.LightGray, Color.White)</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>LoadingSpinner</td>
+                        <td>LoadingSpinner.None</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Height</td>
+                        <td>Parent.Height - Self.Y - 40</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Fill</td>
+                        <td>Color.White</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>BorderThickness</td>
+                        <td>1</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>BorderStyle</td>
+                        <td>BorderStyle.Solid</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+    </ol>
+    <p>Done with layout and visuals of some controls, next lesson <br>
+        we'll dive into the adding of controls to the course menu.
+    </p>
+</div>

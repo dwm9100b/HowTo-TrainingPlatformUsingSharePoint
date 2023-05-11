@@ -1,0 +1,309 @@
+<!-- LS - Lesson menu.htm -->
+<div style='width: 650px; margin-top: 0px;'>
+    <p style='margin-top: 0px;'>We will be using a gallery control to create our left menu.</p>
+    <ol>
+       <li>We will be working with the conLessonMenu container</li>
+       <li>So make sure the container is selected in the Tree view</li>
+       <li>Then from the top toolbar, click on +Insert</li>
+       <li>Search for and select the Blank Vertical gallery control</li>
+       <li>When prompted for data source, select the colCourseLessons</li>
+       <li>In the right properties pane, under Layout, select Title</li>
+       <li>In the property above Layout, click on Edit of Fields</li>
+       <li>I suspect the Title has already defaulted to Title, if not do so</li>
+       <li>Rename your gallery to:  galLessonMenu</li>
+       <li>Now, before we go further, click on the Home Screen</li>
+       <li>Then hold your Alt key down and click on any course</li>
+       <li>This should populate some of the data structures</li>
+       <li>Now click back on the Lessons Screen</li>
+       <li>In Tree view expand the gallery control, galLessonMenu</li>
+       <li>Rename Title: lbLessonlTitle</li>
+       <li>Delete the Next Arrow icon</li>
+       <li>Rename the Separator: rectLessonSeparator</li>
+       <li>Move lblLessonSeparator to the bottom, via the … menu, reorder, Send to back</li>
+       <li>Click on lblLessonTitle under the galLessonMenu control in the Tree view</li>
+       <li>From the top toolbar, click on +Insert</li>
+       <li>Expand the Icons section, scroll and select the Check icon</li>
+       <li>Rename the icon:  icoLessonCompleted</li>
+       <li>Don't worry yet about properties for any of these controls, we'll get to them</li>
+       <li>Click on the icoLessonCompleted control in galLessonMenu</li>
+       <li>From the top toolbar, click on +Insert</li>
+       <li>Select Text label</li>
+       <li>Rename the Text label: lblLessonTime</li>
+       <li>Make sure lblLessonTime is selected</li>
+       <li>Again, from the top toolbar, click on +Insert</li>
+       <li>Under the Icons section, select the Add icon</li>
+       <li>Rename this to: icoLessonCursor</li>
+       <li>Your controls within galLessonMenu should be in the following order
+            <ul style='list-style-type: disc;'>
+                <li>icoLessonCursor</li>
+                <li>lblLessonTime</li>
+                <li>icoLessonCompleted</li>
+                <li>lblLessonTitle</li>
+                <li>rectLessonSeparator</li>
+            </ul>
+       </li>
+       <br>
+       <li>Ok let's go update some of the properties for each control<br>
+           First up, properties for <b>galLessonMenu</b>, click on the galLessonMenu control<br/> 
+          <br/> 
+          <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>X</td>
+                   <td>0</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Y</td>
+                   <td>0</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Width</td>
+                   <td>Parent.Width - 10</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>TemplateSize</td>
+                   <td>50</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>TemplateFill</td>
+                   <td>If(ThisItem.IsSelected, Color.LightGray, Color.White)</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                  <td>OnSelect</td>
+                  <td>
+                     <pre><code><span style='color: #b54b8c'>// Set our global html content to empty
+// This should reset the scroll position, this is a hack</span>
+Set(gblHtmContent, &quot;&quot;);
+
+<span style='color: #b54b8c'>// Now start our timer, when it ends it will put selected
+// html content into the global variable for display</span>
+Set(gblStartTimer, true);
+                     </code></pre>
+                  </td>
+               </tr>
+               <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                  <td>LoadingSpinner</td>
+                  <td>LoadingSpinner.None</td>
+              </tr>
+             <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Height</td>
+                   <td>Parent.Height</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>AlignInContainer</td>
+                   <td>AlignInContainer.Start</td>
+                </tr>
+             </tbody>
+          </table> 
+       </li>
+       <br/> 
+       <li>Now let's update the properties of <b>icoLessonCursor</b><br/>
+            <br/>
+            <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+                <tbody>
+                    <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                        <td width='170'>Property</td>
+                        <td>Value</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>X</td>
+                        <td>0</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Y</td>
+                        <td>0</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Width</td>
+                        <td>Parent.TemplateWidth</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Height</td>
+                        <td>Parent.TemplateHeight</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Color</td>
+                        <td>Color.Transparent</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <br/>
+
+       <li>Now properties for 
+          <b>icoLessonCompleted</b>, click on the icoLessonCompleted control<br/> 
+          <br/> 
+          <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>X</td>
+                   <td>5</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Y</td>
+                   <td>0</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Width</td>
+                   <td>Hard coded at 25</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Visible</td>
+                   <td>ThisItem.Completed</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Height</td>
+                   <td>Parent.TemplateHeight</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Color</td>
+                   <td>Color.Green</td>
+                </tr>
+             </tbody>
+          </table> 
+       </li>
+       <br/> 
+       <li>Let's update the properties for 
+          <b>lblLessonTime</b>, click on the lblLessonTime control<br/> 
+          <br/> 
+          <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>X</td>
+                   <td>Parent.TemplateWidth - Self.Width - 3</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Y</td>
+                   <td>0</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Wrap</td>
+                   <td>false</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Width</td>
+                   <td>53</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Visible</td>
+                   <td>ThisItem.Time > 0</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Text</td>
+                   <td>ThisItem.Time & &quot; min&quot;</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Size</td>
+                   <td>8</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Height</td>
+                   <td>Parent.TemplateHeight</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Align</td>
+                   <td>Align.Right</td>
+                </tr>
+             </tbody>
+          </table> 
+       </li>
+       <br/> 
+       <li>Next let's update properties for 
+          <b>lblLessonTitle</b>, click on the lblLessonTitle control<br/> 
+          <br/> 
+          <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>X</td>
+                   <td>icoLessonCompleted.X + icoLessonCompleted.Width + 5</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Y</td>
+                   <td>0</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Wrap</td>
+                   <td>false</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Width</td>
+                   <td>lblLessonTime.X - Self.X</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>VerticalAlign</td>
+                   <td>VerticalAlign.Middle</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Text</td>
+                   <td>ThisItem.Title</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Size</td>
+                   <td>11</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Height</td>
+                   <td>Parent.TemplateHeight</td>
+                </tr>
+             </tbody>
+          </table> 
+       </li>
+       <br/> 
+       <li>Final step on this gallery section is to add a divider between the gallery and the content</li>
+       <li>Make sure you have conLessonMenu selected in the Tree view</li>
+       <li>Then from the top toolbar, click on +Insert</li>
+       <li>Locate and select Rectangle, under Shapes section</li>
+       <li>Rename this control: rectVerticalDivider</li>
+       <li>Update the properties for 
+          <b>rectVerticalDivider</b>, click on the rectVerticalDivider control<br/> 
+          <br/> 
+          <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>X</td>
+                   <td>0</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Y</td>
+                   <td>0</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Width</td>
+                   <td>2</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Height</td>
+                   <td>Parent.Height</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Fill</td>
+                   <td>RGBA(56, 96, 178, 1)</td>
+                </tr>
+             </tbody>
+          </table> 
+       </li>
+       <br/> 
+       <li>Good time to not only save the app, but also do a publish so you can revert back if needed</li>
+    </ol>
+    <br/>
+ </div>

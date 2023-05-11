@@ -1,0 +1,212 @@
+<!-- Create SharePoint List 2.htm -->
+<div style='width: 700px; margin-top: 0px;'>
+    <p style='margin-top: 0px;'> Now for our second list, this one will hold the actual lessons. </p>
+    <ol>
+        <li>If not already there, navigate to the Training site</li>
+        <li>From the upper toolbar, click on +New, select List</li>
+        <li>Create a new Blank list</li>
+        <li>Name: CourseLessons</li>
+        <li>Click on Create</li>
+        <li>Once created, go into Settings (click on upper right cog wheel)</li>
+        <li>Click on List settings</li>
+        <li>Under Advanced settings, turn off attachments</li>
+        <li>Click Ok</li>
+        <li>Back to the list</li>
+        <br />
+        <li>Add columns as follows:<br /><br />
+            <table style='width: 100%; margin-left: 25px;border-collapse: collapse;'>
+                <tbody>
+                    <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                        <td width='130'>Col Type</td>
+                        <td width='130'>Name</td>
+                        <td width='80'>Default</td>
+                        <td>Comments</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Text</td>
+                        <td>Title</td>
+                        <td>
+                        </td>
+                        <td>Always part of a list</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Lookup</td>
+                        <td>Course</td>
+                        <td>
+                        </td>
+                        <td>
+                            Source: Courses<br /> 
+                            Column: Title<br /> 
+                            Under More options...<br /> 
+                            Add addl columns, select ID<br /> 
+                            Required: Yes 
+                        </td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Number</td>
+                        <td>LessonId</td>
+                        <td>
+                        </td>
+                        <td>
+                            Decimal places: 0<br /> 
+                            Under More options...<br>
+                            Thousands separator: No<br>
+                            Required: Yes
+                        </td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Number</td>
+                        <td>Time</td>
+                        <td>0</td>
+                        <td>
+                            Decimal places: 0<br /> 
+                            Under More options...<br>
+                            Thousands separator: No<br>
+                            Required: Yes
+                        </td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Multiline text</td>
+                        <td>Content</td>
+                        <td>
+                        </td>
+                        <td>
+                            Under More options...<br>
+                            Use rich text: Yes
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <br />
+        <li>Let's move some columns around in the list</li>
+        <li>Drag the Title column and put it right between Time and Content</li>
+        <li>Also a good time to adjust your column widths per your liking</li>
+        <li>Now click on +New to add a new list item, we'll edit the form</li>
+        <li>Towards the upper right, click on the Edit form icon</li>
+        <li>Select Edit columns</li>
+        <li>Move the columns around so the order is as follows<br>
+            <ul style='list-style-type: disc;'>
+                <li>Course</li>
+                <li>LessonId</li>
+                <li>Time</li>
+                <li>Title</li>
+                <li>Content</li>
+            </ul>
+        </li>
+        <br>
+        <li>Now we'll add some content<br />
+            <br />
+            <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+                <tbody>
+                    <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                        <td width='190'>Course</td>
+                        <td width='80'>LessonId</td>
+                        <td width='60'>Time</td>
+                        <td width='150'>Title</td>
+                        <td>Content</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Course 1 for local</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>Course 1 - Lesson 1</td>
+                        <td><p style='margin-top: 0px;'>This is content for:</p>
+                            <p>Course 1 - Lesson 1</p>
+                            <p>for local storage</p>
+                        </td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Course 1 for local</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>Course 1 - Lesson 2</td>
+                        <td>
+                            <p style='margin-top: 0px;'>This is content for:</p>
+                            <p>Course 1 - Lesson 2</p>
+                            <p>for local storage</p>
+                        </td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Course 1 for local</td>
+                        <td>10</td>
+                        <td>2</td>
+                        <td>Course 1 - Lesson 3</td>
+                        <td>
+                            <p style='margin-top: 0px;'>This is content for:</p>
+                            <p>Course 1 - Lesson 3</p>
+                            <p>for local storage</p>
+                        </td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Course 2 for SharePoint</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>Course 2 - Lesson 1</td>
+                        <td>
+                            <p style='margin-top: 0px;'>This is content for:</p>
+                            <p>Course 2 - Lesson 1</p>
+                            <p>for SharePoint storage</p>
+                        </td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Course 2 for SharePoint</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>Course 2 - Lesson 2</td>
+                        <td>
+                            <p style='margin-top: 0px;'>This is content for:</p>
+                            <p>Course 2 - Lesson 2</p>
+                            <p>for SharePoint storage</p>
+                        </td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Course 2 for SharePoint</td>
+                        <td>10</td>
+                        <td>15</td>
+                        <td>Course 2 - Lesson 3</td>
+                        <td>
+                            <p style='margin-top: 0px;'>This is content for:</p>
+                            <p>Course 2 - Lesson 3</p>
+                            <p>for SharePoint storage</p>
+                        </td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Course 3 for Dataverse</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>Course 3 - Lesson 1</td>
+                        <td>
+                            <p style='margin-top: 0px;'>This is content for:</p>
+                            <p>Course 3 - Lesson 1</p>
+                            <p>for Dataverse storage</p>
+                        </td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Course 3 for Dataverse</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>Course 3 - Lesson 2</td>
+                        <td>
+                            <p style='margin-top: 0px;'>This is content for:</p>
+                            <p>Course 3 - Lesson 2</p>
+                            <p>for Dataverse storage</p>
+                        </td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Course 3 for Dataverse</td>
+                        <td>10</td>
+                        <td>7</td>
+                        <td>Course 3 - Lesson 3</td>
+                        <td>
+                            <p style='margin-top: 0px;'>This is content for:</p>
+                            <p>Course 3 - Lesson 3</p>
+                            <p>for Dataverse storage</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+    </ol>
+    <p>One more list to create...</p>
+</div>

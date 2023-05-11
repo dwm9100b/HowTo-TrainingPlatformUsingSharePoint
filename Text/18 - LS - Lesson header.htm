@@ -1,0 +1,228 @@
+<!-- LS - Lesson header.htm -->
+<div style='width: 650px; margin-top: 0px;'>
+    <p style='margin-top: 0px;'>Making great progress!<br/> Let's now create the header for Lessons of content</p>
+    <ol>
+       <li>Click on to select conLessonHeader in the Tree view</li>
+       <li>Then from the top toolbar, click on +Insert</li>
+       <li>Locate and select the Text label control</li>
+       <li>Rename this one: lblPageTitle</li>
+       <li>Now click on +Insert again</li>
+       <li>Locate and select the Button control</li>
+       <li>Rename this: btnLessonCompleted</li>
+       <li>Move btnLessonCompleted to the bottom, ... Menu, Reorder, Send to back
+       <li>Click on whichever control is first, should be lblPageTitle</li>
+       <li>From the top toolbar, click on +Insert</li>
+       <li>Locate and select the Rectangle shape</li>
+       <li>Rename it: rectPageTitleCursor</li>
+       <li>Make sure rectPageTitleCursor is the first control in the container</li>
+       <li>Now select the 
+          <b>lblPageTitle</b> control, update properties as follows<br/> 
+          <br/> 
+          <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>X</td>
+                   <td>15</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Y</td>
+                   <td>0</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                  <td>Width</td>
+                  <td>Parent.Width - btnLessonCompleted.Width - 50</td>
+               </tr>
+               <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>VerticalAlign</td>
+                   <td>VerticalAlign.Middle</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Text</td>
+                   <td>galLessonMenu.Selected.Title</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Size</td>
+                   <td>20</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Height</td>
+                   <td>Parent.Height</td>
+                </tr>
+             </tbody>
+          </table> 
+       </li>
+          <br/> 
+          <li>Let's update the properties for the <b>rectPageTitleCursor</b> control<br/>
+            <br/>
+              <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+                 <tbody>
+                    <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                       <td width='170'>Property</td>
+                       <td>Value</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                       <td>X</td>
+                       <td>lblPageTitle.X</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                       <td>Y</td>
+                       <td>lblPageTitle.Y</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                       <td>Width</td>
+                       <td>lblPageTitle.Width</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                       <td>Height</td>
+                       <td>lblPageTitle.Height</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                       <td>Fill</td>
+                       <td>Color.Transparent</td>
+                    </tr>
+                 </tbody>
+              </table>
+           </li>
+           <br/>
+       <li>Now let's have you update the button properties</li>
+       <li>In the Tree view, click on to select 
+          <b>btnLessonCompleted</b></li>
+       <li>Update its properties as follows<br/> 
+          <br/> 
+          <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>X</td>
+                   <td>Parent.Width - Self.Width - 15</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Y</td>
+                   <td>(Parent.Height - Self.Height) / 2</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Visible</td>
+                   <td>galLessonMenu.Selected.Time > 0</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>VerticalAlign</td>
+                   <td>VerticalAlign.Middle</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Text</td>
+                   <td>If(galLessonMenu.Selected.Completed, &quot;Reset Completed&quot;, &quot;Completed&quot;)</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Size</td>
+                   <td>12</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>OnSelect</td>
+                   <td><pre><code><span style='color: #b54b8c'>// Start of btnLessonCompleted OnSelect</span>
+
+<span style='color: #b54b8c'>// We store completion in a SharePoint List
+// If selected lesson is showing completed
+// remove the record from the list</span>
+If(galLessonMenu.Selected.Completed,
+   Remove(
+      LessonsCompleted, 
+      LookUp(
+         LessonsCompleted, 
+         CourseId = galCourseMenu.Selected.ID 
+         && LessonId = galLessonMenu.Selected.LessonId
+         && Student.Email = User().Email
+      )
+   )
+   ,
+   <span style='color: #b54b8c'>// Else it was not showing completed, so add a
+   // new record to the SharePoint list</span>
+   Patch(
+      LessonsCompleted,
+      Defaults(LessonsCompleted),
+      {
+         CourseId: galCourseMenu.Selected.ID,
+         LessonId: galLessonMenu.Selected.LessonId,
+         Student: {
+            Claims: &quot;i:0#.f|membership|&quot; & User().Email,
+            DisplayName: User().FullName,
+            Department: &quot;&quot;,
+            Email: User().Email,
+            JobTitle: &quot;&quot;,
+            Picture: &quot;&quot;
+         }
+      }
+   );
+);
+
+<span style='color: #b54b8c'>// Toggle our local course collection</span>
+Patch(
+   colCourseLessons, 
+   galLessonMenu.Selected, 
+   {Completed: !galLessonMenu.Selected.Completed});
+
+<span style='color: #b54b8c'>// Here is where we check if all the lessons
+// for this course have been completed</span>
+Set(varCourseCompleted, 
+    CountIf(colCourseLessons, Completed) = 
+    CountIf(colCourseLessons, Time > 0)
+);
+
+<span style='color: #b54b8c'>// If course has been completed, add a new record
+// to the SharePoint list with no LessonId
+// Completed rec with no LessonId means entire course</span>
+If(varCourseCompleted,
+   Patch(
+      LessonsCompleted,
+      Defaults(LessonsCompleted),
+      {
+         CourseId: galCourseMenu.Selected.ID,
+         LessonId: 0,
+         Student: {
+            Claims: &quot;i:0#.f|membership|&quot; & User().Email,
+            DisplayName: User().FullName,
+            Department: &quot;&quot;,
+            Email: User().Email,
+            JobTitle: &quot;&quot;,
+            Picture: &quot;&quot;
+         }
+      }
+   )
+   ,
+   <span style='color: #b54b8c'>// Else if there are still lessons to complete
+   // Remove the course completed rec if it exists</span>
+   Remove(
+      LessonsCompleted, 
+      LookUp(
+         LessonsCompleted, 
+         CourseId = galCourseMenu.Selected.ID 
+         && LessonId = 0
+         && Student.Email = User().Email
+      )
+   )
+);
+<span style='color: #b54b8c'>// End of btnLessonCompleted OnSelect</span>
+</code></pre>
+                   </td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Height</td>
+                   <td>28</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Align</td>
+                   <td>Align.Center</td>
+                </tr>
+             </tbody>
+          </table> 
+          <br/> 
+       </li>
+       <li>Great!  All done with the page header...  save, next</li>
+    </ol>
+ </div>

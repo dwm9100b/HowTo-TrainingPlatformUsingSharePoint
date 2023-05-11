@@ -1,0 +1,237 @@
+<!-- LS - Screen header.htm -->
+<div style='width: 650px; margin-top: 0px;'>
+    <p style='margin-top: 0px;'>Now that most functionality is present, lets update our screen header.</p>
+    <ol>
+       <li>Select the control conScreenHeader in the Tree view</li>
+       <li>Then from the top toolbar, click on +Insert</li>
+       <li>Locate and select the Text label control<br/></li>
+       <li>Rename this one: lblMinsRemaining</li>
+       <li>From the top toolbar again, click on +Insert</li>
+       <li>Locate and select the Text label control<br/></li>
+       <li>Rename this one: lblAppTitle</li>
+       <li>Again, click on +Insert</li>
+       <li>Locate and select the Text label control<br/></li>
+       <li>Rename this one: lblPctComplete</li>
+       <li>And again, click on +Insert</li>
+       <li>Locate and select the Rectangle shape, under Shapes<br/></li>
+       <li>Rename this one: rectScreenHeaderCursor</li>
+       <li>And finally, click on +Insert</li>
+       <li>Locate and select under Icons, the Left icon</li>
+       <li>Rename this one: icoGoBack</li>
+       <li>Your controls should be in the following top to bottom order<br>
+            <ul style='list-style-type: disc;'>
+                <li>icoGoBack</li>
+                <li>rectScreenHeaderCursor</li>
+                <li>lblPctComplete</li>
+                <li>lblAppTitle</li>
+                <li>lblMinsRemaining</li>
+            </ul>
+       </li>
+       <br>
+       <li>Now select the 3 text labels</li>
+       <li>We can now edit common properties<br/> 
+          <br/> 
+          <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Y</td>
+                   <td>0</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Width</td>
+                   <td>225</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>VerticalAlign</td>
+                   <td>VerticalAlign.Middle</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Size</td>
+                   <td>13</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Height</td>
+                   <td>Parent.Height</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Color</td>
+                   <td>Color.White</td>
+                </tr>
+             </tbody>
+          </table> 
+       </li>
+       <br>
+       <li>We will start on the <b>icoGoBack</b> control, click on it</li>
+       <li>Update its properties as follows<br>
+        <br>
+        <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+            <tbody>
+                <tr style='font-weight: bold; background-color: LightGrey; vertical-align: top;'>
+                    <td width=170>Property</td>
+                    <td>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                    <td>X</td>
+                    <td>5</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                    <td>Width</td>
+                    <td>40</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                    <td>PaddingRight</td>
+                    <td>15</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                    <td>OnSelect</td>
+                    <td>Navigate('Home Screen', ScreenTransition.Fade);</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                    <td>Icon</td>
+                    <td>Icon.ChevronLeft</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                    <td>Color</td>
+                    <td>Color.White</td>
+                </tr>
+            </tbody>
+        </table>
+       </li>
+       <br>        
+       <li>Now go ahead and click on the <b>rectScreenHeaderCursor</b></li>
+       <li>Update its properties as follows<br>
+        <br>
+        <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+            <tbody>
+                <tr style='font-weight: bold; background-color: LightGrey; vertical-align: top;'>
+                    <td width=170>Property</td>
+                    <td>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                    <td>X</td>
+                    <td>Parent.X</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                    <td>Y</td>
+                    <td>Parent.Y</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                    <td>Width</td>
+                    <td>Parent.Width</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                    <td>Height</td>
+                    <td>Parent.Height</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                    <td>Fill</td>
+                    <td>Color.Transparent</td>
+                </tr>
+            </tbody>
+        </table>
+       </li>
+       <br>        
+       <li>Next, let's work on <b>lblPctComplete</b>, in the Tree view, click it</li>
+       <li>Update its properties as follows<br/> 
+          <br/> 
+          <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                    <td width='170'>Property</td>
+                    <td>Value</td>
+                 </tr>
+                 <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                    <td>X</td>
+                    <td>icoGoBack.X + icoGoBack.Width</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                    <td>Text</td>
+                    <td><pre><code>RoundUp( 
+     If(CountIf(colCourseLessons,Completed) > 0, 
+  
+         <span style='color: #b54b8c;'>// If there are items completed, Count them then
+         // divide that by the count of items that have minutes</span>
+         (CountIf(colCourseLessons,Completed) /
+         (CountIf(colCourseLessons,Time > 0)) * 100),
+  
+          
+         <span style='color: #b54b8c;'>// No items completed, means 0</span>
+         0
+     ),
+  
+      
+     <span style='color: #b54b8c;'>// Round up to 0 decimal places</span>
+     0 
+  
+ ) & &quot;% completed&quot;
+                  </code></pre>
+                    </td>
+                 </tr>
+             </tbody>
+          </table> 
+       </li>
+       <br>
+       <li>Now click on 
+          <b>lblAppTitle</b> in the Tree view</li>
+       <li>Update its properties as follows<br/> 
+          <br/> 
+          <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                    <td>X</td>
+                    <td>(App.Width - Self.Width) / 2</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                    <td>Width</td>
+                    <td>450</td>
+                 </tr>
+                 <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                    <td>Text</td>
+                    <td>galCourseMenu.Selected.Title</td>
+                 </tr>
+                  <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Align</td>
+                   <td>Align.Center</td>
+                </tr>
+             </tbody>
+          </table> 
+       </li>
+       <br>
+       <li>Last up, click on 
+          <b>lblMinsRemaining</b></li>
+       <li>Update its properties as follows<br/> 
+          <br/> 
+          <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                    <td>X</td>
+                    <td>App.Width - Self.Width - 20</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                    <td>Text</td>
+                    <td>Sum(colCourseLessons, Time) - Sum(Filter(colCourseLessons, Completed), Time) & &quot; minutes remaining&quot;</td>
+                 </tr>
+                 <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Align</td>
+                   <td>Align.Right</td>
+                </tr>
+             </tbody>
+          </table> 
+       </li>
+       <br>
+       <li>Our screen header is done</li>
+    </ol>
+    <br/>
+ </div>

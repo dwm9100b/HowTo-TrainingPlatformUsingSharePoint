@@ -1,0 +1,247 @@
+<!-- HS - Intro section.htm -->
+<div style='width: 650px; margin-top: 0px;'>
+
+    <p style='margin-top: 0px;'>
+        Let's work on the intro section. This will hold our descriptive text on what this app is about.
+    </p>
+
+    <ol>
+        <li>In the left Tree view, click on conIntro</li>
+        <li>From the top toolbar, click on +Insert</li>
+        <li>Locate and select the HTML text control under Display</li>
+        <li>Rename this: htmIntroContent</li>
+        <li>Click on +Insert again</li>
+        <li>Locate and select the Text label control</li>
+        <li>Rename this: lblIntroTitle</li>
+        <li>Again, click on +Insert</li>
+        <li>Locate and select the Rectangle shape</li>
+        <li>Rename this: rectIntroTitleCursor</li>
+        <li>Click on +Insert</li>
+        <li>Locate and select the Text label control</li>
+        <li>Rename this: lblAppVersion</li>
+        <li>Move this to the bottom, click on ... menu, reorder, send to back</li>
+        <li>One last control, click on +Insert</li>
+        <li>Locate and select the Timer control</li>
+        <li>Rename this: timIconDelay</li>
+        <li>Move this to the bottom, click on ... menu, reorder, send to back</li>
+        <li>Your controls should be in the following order:<br>
+            <ul style='list-style-type: disc;'>
+                <li>rectIntroTitleCursor</li>
+                <li>lblIntroTitle</li>
+                <li>htmIntroContent</li>
+                <li>lblAppVersion</li>
+                <li>timIconDelay</li>
+            </ul>
+        </li>
+        <li>Now that we have our controls, lets update their properties</li>
+        <br>
+        <li>First up, click on <b>rectIntroTitleCursor</b>, update as follows<br>
+            <br>
+            <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+                <tbody>
+                    <tr style='font-weight: bold; background-color: LightGrey; vertical-align: top;'>
+                        <td width=170>Property</td>
+                        <td>Value</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>X</td>
+                        <td>Parent.X</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Y</td>
+                        <td>Parent.Y</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Width</td>
+                        <td>Parent.Width</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Height</td>
+                        <td>87</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Fill</td>
+                        <td>Color.Transparent</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <br>
+        <li>Next, click on <b>lblIntroTitle</b> and update as follows<br>
+            <br>
+            <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+                <tbody>
+                    <tr style='font-weight: bold; background-color: LightGrey; vertical-align: top;'>
+                        <td width=170>Property</td>
+                        <td>Value</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>X</td>
+                        <td>rectIntroTitleCursor.X</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Y</td>
+                        <td>rectIntroTitleCursor.Y</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Width</td>
+                        <td>rectIntroTitleCursor.Width</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Text</td>
+                        <td>&quot;Training Platform&quot;</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Size</td>
+                        <td>20</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Height</td>
+                        <td>rectIntroTitleCursor.Height</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Color</td>
+                        <td>Color.White</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Align</td>
+                        <td>Align.Center</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <br>
+        <li>Click on <b>htmIntroContent</b> and update its properties<br>
+            <br>
+            <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+                <tbody>
+                    <tr style='font-weight: bold; background-color: LightGrey; vertical-align: top;'>
+                        <td width=170>Property</td>
+                        <td>Value</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>X</td>
+                        <td>rectIntroTitleCursor.X</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Y</td>
+                        <td>rectIntroTitleCursor.Height</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Width</td>
+                        <td>rectIntroTitleCursor.Width</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Size</td>
+                        <td>18</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>PaddingRight</td>
+                        <td>50</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>PaddingLeft</td>
+                        <td>50</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>HtmlText</td>
+                        <td>You will add your own intro html text here</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Height</td>
+                        <td>Parent.Height - Self.Y</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Color</td>
+                        <td>Color.White</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <br>
+        <li>Click on <b>lblAppVersion</b> and update its properties<br>
+            <br>
+            <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+                <tbody>
+                    <tr style='font-weight: bold; background-color: LightGrey; vertical-align: top;'>
+                        <td width=170>Property</td>
+                        <td>Value</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>X</td>
+                        <td>htmIntroContent.X</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Y</td>
+                        <td>App.Height - Self.Height</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Width</td>
+                        <td>150</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Text</td>
+                        <td>gblAppVersion</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Size</td>
+                        <td>10</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>PaddingLeft</td>
+                        <td>50</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Color</td>
+                        <td>Color.White</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <br>
+        <li>Click on <b>timIconDelay</b> and update its properties<br>
+            <br>
+            <table style='width: 100%; margin-left: 25px; border-collapse: collapse;'>
+                <tbody>
+                    <tr style='font-weight: bold; background-color: LightGrey; vertical-align: top;'>
+                        <td width=170>Property</td>
+                        <td>Value</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>X</td>
+                        <td>lblAppVersion.X</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Y</td>
+                        <td>lblAppVersion.Y</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Width</td>
+                        <td>lblAppVersion.Width</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Visible</td>
+                        <td>false</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Start</td>
+                        <td>!gblCourseDataLoaded</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>OnTimerEnd</td>
+                        <td>Set(gblCourseDataLoaded, true)</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Height</td>
+                        <td>lblAppVersion.Height</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                        <td>Duration</td>
+                        <td>1500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>  
+    </ol>
+    <p>Half the screen done, lets move on and work on the Courses section...</p>
+</div>
