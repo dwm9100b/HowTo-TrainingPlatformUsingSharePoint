@@ -1,2 +1,2 @@
-# Training-platform-using-SharePoint
+# Training platform using SharePoint
  
