@@ -21,17 +21,19 @@ I am confident you will find value with the lessons and most likely see many mor
 
 To use:
 
-1. Click on the green "Code" button above
-2. Click on Download ZIP
-3. Unzip the downloaded zip
-4. Note where you downloaded this zip
-5. From within your PowerApp studio
-6. Select Apps in the left nav
-7. From the top nav, select Import canvas app
-8. When asked, navigate to the unzipped location
-9. Select the app zip file
-10. Then follow the prompts
-11. Once imported, publish and run the app
+1. Right side of the GitHub page
+2. Under the Releases section
+3. Click on the latest release
+4. You'll be taken to the release page
+5. Click on the **TrainingPlatformUsingSharePoint.zip** file
+6. Download should start, note the download location
+7. From within your PowerApp studio
+8. Select Apps in the left nav
+9. From the top toolbar, select Import canvas app
+10. When asked, navigate to the download location
+11. Select the **TrainingPlatformUsingSharePoint.zip.zip** file
+12. Then follow the prompts
+13. Once imported, publish and run the app
 
 Enjoy,  
 Dale
