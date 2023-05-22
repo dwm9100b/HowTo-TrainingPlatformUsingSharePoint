@@ -31,7 +31,7 @@ To use:
 8. Select Apps in the left nav
 9. From the top toolbar, select Import canvas app
 10. When asked, navigate to the download location
-11. Select the **HowTo-TrainingPlatformUsingSharePoint.zip.zip** file
+11. Select the **HowTo-TrainingPlatformUsingSharePoint.zip** file
 12. Then follow the prompts
 13. Once imported, publish and run the app
 
