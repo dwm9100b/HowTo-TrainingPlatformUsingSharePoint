@@ -1,4 +1,4 @@
-# Training platform using SharePoint - Soon
+# Training platform using SharePoint
  
 ![PowerAppTrainingPlatformSharePoint1](https://user-images.githubusercontent.com/2302848/238735602-21e6215b-85e6-412e-9bcc-690a231edd6f.png)
 
